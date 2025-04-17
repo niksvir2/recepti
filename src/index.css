@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 25% 96%;
+    --foreground: 30 9% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 9% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 9% 22%;
+
+    --primary: 27 96% 61%;
+    --primary-foreground: 30 9% 10%;
+
+    --secondary: 20 14% 96%;
+    --secondary-foreground: 30 9% 22%;
+
+    --muted: 20 14% 92%;
+    --muted-foreground: 30 9% 40%;
+
+    --accent: 27 96% 91%;
+    --accent-foreground: 30 9% 22%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 9% 90%;
+    --input: 30 9% 90%;
+    --ring: 27 96% 51%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+}
+
+@layer components {
+  .recipe-card {
+    @apply transition duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .category-card {
+    @apply transition duration-300 hover:shadow-lg hover:bg-accent/50;
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
